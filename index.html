@@ -1,0 +1,126 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Syed Hassan Irtaza — Portfolio</title>
+  <link rel="stylesheet" href="styles.css" />
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Instrument+Serif:ital@0;1&family=DM+Sans:wght@300;400;500;600&display=swap" rel="stylesheet" />
+</head>
+<body>
+
+  <!-- ===== TOP NAVIGATION ===== -->
+  <nav class="navbar">
+    <a href="#" class="logo"><h1>Syed Hassan Irtaza<sup>™</sup></h1></a>
+    <a href="https://www.linkedin.com/in/syed-hassan-irtaza/" class="btn-hire">Hire me</a>
+  </nav>
+
+  <!-- ===== HERO SECTION ===== -->
+  <section class="hero">
+    <div class="hero-card">
+      <!-- Circular profile image — replace src with your own photo -->
+      <div class="avatar-wrap">
+        <img
+          src="Images/Photo.jpg"
+          alt="Syed Hassan Irtaza"
+          class="avatar"
+        />
+      </div>
+      <p class="hero-line1">Hi! I'm Syed Hassan Irtaza.</p>
+      <p class="hero-line2">Your go-to <span class="hero-role">full-stack developer</span>.</p>
+      <a href="https://wa.me/923001234567?text=Hello,Hassan%20I%20wanted%20to%20book%20a%20call%20with%20you" class="btn-cta">Book a call</a>
+    </div>
+  </section>
+
+  <!-- ===== CATEGORY FILTERS ===== -->
+  <section class="filters">
+    <div class="filter-group" role="group" aria-label="Project categories">
+      <button class="pill active" data-filter="all">All projects</button>
+      <button class="pill" data-filter="strategy">Strategy</button>
+      <button class="pill" data-filter="design">Design</button>
+      <button class="pill" data-filter="marketing">Marketing</button>
+      <button class="pill" data-filter="development">Development</button>
+    </div>
+  </section>
+
+  <!-- ===== FEATURED PROJECT CAROUSEL ===== -->
+  <section class="project-section">
+    <div class="project-track">
+
+      <!-- Slide 1 -->
+      <div class="project-slide active" data-category="design">
+        <div class="project-bg-text" aria-hidden="true">
+          SYED HASSAN&nbsp;&nbsp;SYED HASSAN&nbsp;&nbsp;SYED HASSAN&nbsp;&nbsp;SYED HASSAN&nbsp;&nbsp;
+          SYED HASSAN&nbsp;&nbsp;SYED HASSAN&nbsp;&nbsp;SYED HASSAN&nbsp;&nbsp;SYED HASSAN&nbsp;&nbsp;
+          SYED HASSAN&nbsp;&nbsp;SYED HASSAN&nbsp;&nbsp;SYED HASSAN&nbsp;&nbsp;SYED HASSAN&nbsp;&nbsp;
+        </div>
+        <div class="project-card">
+          <div class="project-card-inner">
+            <span class="project-tag">Design</span>
+            <h3 class="project-title">Brand Identity System</h3>
+            <p class="project-desc">A comprehensive visual identity for a fintech startup, from logo to design tokens.</p>
+          </div>
+        </div>
+      </div>
+
+      <!-- Slide 2 -->
+      <div class="project-slide" data-category="development">
+        <div class="project-bg-text project-bg-text--blue" aria-hidden="true">
+          IRTAZA&nbsp;&nbsp;IRTAZA&nbsp;&nbsp;IRTAZA&nbsp;&nbsp;IRTAZA&nbsp;&nbsp;IRTAZA&nbsp;&nbsp;
+          IRTAZA&nbsp;&nbsp;IRTAZA&nbsp;&nbsp;IRTAZA&nbsp;&nbsp;IRTAZA&nbsp;&nbsp;IRTAZA&nbsp;&nbsp;
+          IRTAZA&nbsp;&nbsp;IRTAZA&nbsp;&nbsp;IRTAZA&nbsp;&nbsp;IRTAZA&nbsp;&nbsp;IRTAZA&nbsp;&nbsp;
+        </div>
+        <div class="project-card">
+          <div class="project-card-inner">
+            <span class="project-tag">Development</span>
+            <h3 class="project-title">SaaS Dashboard</h3>
+            <p class="project-desc">Full-stack web app with real-time analytics, role-based auth, and a polished UI.</p>
+          </div>
+        </div>
+      </div>
+
+      <!-- Slide 3 -->
+      <div class="project-slide" data-category="strategy">
+        <div class="project-bg-text project-bg-text--green" aria-hidden="true">
+          HASSAN&nbsp;&nbsp;HASSAN&nbsp;&nbsp;HASSAN&nbsp;&nbsp;HASSAN&nbsp;&nbsp;HASSAN&nbsp;&nbsp;
+          HASSAN&nbsp;&nbsp;HASSAN&nbsp;&nbsp;HASSAN&nbsp;&nbsp;HASSAN&nbsp;&nbsp;HASSAN&nbsp;&nbsp;
+          HASSAN&nbsp;&nbsp;HASSAN&nbsp;&nbsp;HASSAN&nbsp;&nbsp;HASSAN&nbsp;&nbsp;HASSAN&nbsp;&nbsp;
+        </div>
+        <div class="project-card">
+          <div class="project-card-inner">
+            <span class="project-tag">Strategy</span>
+            <h3 class="project-title">Go-to-Market Plan</h3>
+            <p class="project-desc">Roadmap and competitive analysis for a B2B software launch in three markets.</p>
+          </div>
+        </div>
+      </div>
+
+      <!-- Slide 4 -->
+      <div class="project-slide" data-category="marketing">
+        <div class="project-bg-text project-bg-text--blue" aria-hidden="true">
+          COMING SOON&nbsp;&nbsp;COMING SOON&nbsp;&nbsp;COMING SOON&nbsp;&nbsp;COMING SOON&nbsp;&nbsp;
+          COMING SOON&nbsp;&nbsp;COMING SOON&nbsp;&nbsp;COMING SOON&nbsp;&nbsp;COMING SOON&nbsp;&nbsp;
+          COMING SOON&nbsp;&nbsp;COMING SOON&nbsp;&nbsp;COMING SOON&nbsp;&nbsp;COMING SOON&nbsp;&nbsp;
+        </div>
+        <div class="project-card">
+          <div class="project-card-inner">
+            <span class="project-tag">Development</span>
+            <h3 class="project-title">SaaS Dashboard</h3>
+            <p class="project-desc">Full-stack web app with real-time analytics, role-based auth, and a polished UI.</p>
+          </div>
+        </div>
+      </div>
+
+    </div>
+
+    <!-- Navigation arrows -->
+    <button class="arrow arrow-left" id="prevBtn" aria-label="Previous project">&#8249;</button>
+    <button class="arrow arrow-right" id="nextBtn" aria-label="Next project">&#8250;</button>
+  </section>
+
+  <script src="script.js"></script>
+</body>
+</html>
+hire
