@@ -1,7 +1,6 @@
-/* ============================================================
-   RESET & CSS VARIABLES
-   ============================================================ */
-*, *::before, *::after {
+*,
+*::before,
+*::after {
   box-sizing: border-box;
   margin: 0;
   padding: 0;
@@ -18,12 +17,11 @@
   --pill-active-text: #ffffff;
   --card-bg: #efefed;
   --shadow-sm: 0 2px 12px rgba(0, 0, 0, 0.06);
-  --shadow-md: 0 8px 32px rgba(0, 0, 0, 0.10);
+  --shadow-md: 0 8px 32px rgba(0, 0, 0, 0.1);
   --radius-sm: 12px;
   --radius-lg: 24px;
   --radius-pill: 999px;
 
-  /* Project slide accent colours */
   --accent-yellow: #f5c518;
   --accent-blue: #3a86ff;
   --accent-green: #2ec4b6;
@@ -42,9 +40,10 @@ body {
   -webkit-font-smoothing: antialiased;
 }
 
-/* ============================================================
-   TOP NAVIGATION
-   ============================================================ */
+#root {
+  min-height: 100vh;
+}
+
 .navbar {
   position: sticky;
   top: 0;
@@ -54,7 +53,6 @@ body {
   justify-content: space-between;
   padding: 20px 40px;
   background: var(--bg);
-  /* subtle backdrop blur for depth */
   backdrop-filter: blur(8px);
   -webkit-backdrop-filter: blur(8px);
 }
@@ -68,13 +66,17 @@ body {
   text-decoration: none;
 }
 
+.logo h1 {
+  font-size: inherit;
+  font-weight: inherit;
+}
+
 .logo sup {
   font-size: 0.6em;
   vertical-align: super;
   letter-spacing: 0;
 }
 
-/* "Hire me" button */
 .btn-hire {
   display: inline-flex;
   align-items: center;
@@ -94,9 +96,6 @@ body {
   transform: translateY(-1px);
 }
 
-/* ============================================================
-   HERO SECTION
-   ============================================================ */
 .hero {
   display: flex;
   justify-content: center;
@@ -113,7 +112,6 @@ body {
   box-shadow: var(--shadow-sm);
 }
 
-/* Circular avatar */
 .avatar-wrap {
   display: flex;
   justify-content: center;
@@ -127,11 +125,9 @@ body {
   object-fit: cover;
   border: 3px solid rgba(255, 255, 255, 0.6);
   box-shadow: var(--shadow-sm);
-  /* desaturate to match the B&W photo in reference */
   filter: grayscale(30%);
 }
 
-/* Hero text */
 .hero-line1 {
   font-family: 'DM Sans', sans-serif;
   font-weight: 300;
@@ -154,7 +150,6 @@ body {
   font-style: italic;
 }
 
-/* "Book a call" CTA */
 .btn-cta {
   display: inline-flex;
   align-items: center;
@@ -174,9 +169,6 @@ body {
   transform: translateY(-1px);
 }
 
-/* ============================================================
-   CATEGORY FILTER PILLS
-   ============================================================ */
 .filters {
   display: flex;
   justify-content: center;
@@ -217,9 +209,6 @@ body {
   font-weight: 500;
 }
 
-/* ============================================================
-   PROJECT / CAROUSEL SECTION
-   ============================================================ */
 .project-section {
   position: relative;
   padding: 0 20px 60px;
@@ -234,7 +223,6 @@ body {
   min-height: 380px;
 }
 
-/* Individual slide */
 .project-slide {
   display: none;
   position: relative;
@@ -250,7 +238,6 @@ body {
   display: flex;
 }
 
-/* Repeating background text */
 .project-bg-text {
   position: absolute;
   inset: 0;
@@ -266,16 +253,18 @@ body {
   color: var(--accent-yellow);
   padding: 24px;
   user-select: none;
-  /* wrap text into a dense block */
   word-spacing: -0.02em;
-  /* layered text effect */
-  text-shadow: 2px 2px 0 rgba(0,0,0,0.04);
+  text-shadow: 2px 2px 0 rgba(0, 0, 0, 0.04);
 }
 
-.project-bg-text--blue  { color: var(--accent-blue); }
-.project-bg-text--green { color: var(--accent-green); }
+.project-bg-text--blue {
+  color: var(--accent-blue);
+}
 
-/* Foreground project card */
+.project-bg-text--green {
+  color: var(--accent-green);
+}
+
 .project-card {
   position: relative;
   z-index: 2;
@@ -319,9 +308,6 @@ body {
   color: var(--text-muted);
 }
 
-/* ============================================================
-   CAROUSEL ARROW BUTTONS
-   ============================================================ */
 .arrow {
   position: absolute;
   top: 50%;
@@ -343,19 +329,26 @@ body {
   transition: background 0.18s ease, transform 0.15s ease;
 }
 
-.arrow:hover {
+.arrow:hover:not(:disabled) {
   background: var(--black);
   color: var(--white);
   border-color: var(--black);
   transform: translateY(-50%) scale(1.07);
 }
 
-.arrow-left  { left: -18px; }
-.arrow-right { right: -18px; }
+.arrow:disabled {
+  opacity: 0.4;
+  cursor: not-allowed;
+}
 
-/* ============================================================
-   RESPONSIVE — MOBILE
-   ============================================================ */
+.arrow-left {
+  left: -18px;
+}
+
+.arrow-right {
+  right: -18px;
+}
+
 @media (max-width: 640px) {
   .navbar {
     padding: 16px 20px;
@@ -377,6 +370,11 @@ body {
     font-size: 1.4rem;
   }
 
-  .arrow-left  { left: 6px; }
-  .arrow-right { right: 6px; }
+  .arrow-left {
+    left: 6px;
+  }
+
+  .arrow-right {
+    right: 6px;
+  }
 }
