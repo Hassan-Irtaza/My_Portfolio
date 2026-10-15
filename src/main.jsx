@@ -113,11 +113,11 @@ function App() {
       <header className="header">
         <a className="brand" href="#" aria-label="Hassan Irtaza home">
           <span className="monogram">
-            h<span>i</span>
+            H<span>i</span>
             <i />
           </span>
           <span>
-            Hassan Irtaza
+            Syed Hassan Irtaza
             <span className="brand-sub">AI & Automation Engineer</span>
           </span>
         </a>
@@ -375,7 +375,7 @@ function App() {
                 </div>
                 <div className="gpa">
                   <strong>
-                    3.88<span>/4.00</span>
+                    3.83<span>/4.00</span>
                   </strong>
                   <span>Dean’s Honor List</span>
                 </div>
@@ -465,7 +465,7 @@ function App() {
       </main>
       <footer>
         <a className="footer-name" href="#">
-          Hassan Irtaza<span>✳</span>
+          Syed Hassan Irtaza<span>✳</span>
         </a>
         <span>Thoughtfully engineered. © {new Date().getFullYear()}</span>
         <a href="#">
