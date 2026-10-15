@@ -112,10 +112,7 @@ function App() {
       </a>
       <header className="header">
         <a className="brand" href="#" aria-label="Hassan Irtaza home">
-          <span className="monogram">
-            H<span>i</span>
-            <i />
-          </span>
+          <span className="monogram">H</span>
           <span>
             Syed Hassan Irtaza
             <span className="brand-sub">AI & Automation Engineer</span>
