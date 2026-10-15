@@ -113,13 +113,13 @@ function App() {
       </a>
       <header className="header">
         <a className="brand" href="#" aria-label="Hassan Irtaza home">
-          <span className="monogram">H</span>
-          <AnimatedName>
+
+
             <span>
               Syed Hassan Irtaza
               <span className="brand-sub">AI & Automation Engineer</span>
             </span>
-          </AnimatedName>
+
         </a>
         <nav
           className={menu ? "navigation open" : "navigation"}
