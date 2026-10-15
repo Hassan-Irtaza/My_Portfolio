@@ -381,8 +381,10 @@ function App() {
                   }}
                 />
               </div>
-              <span className="about-star">✳</span>
               <h2>
+                <br></br>
+                <br></br>
+                <br></br>
                 <br></br>
                 <br></br>
                 <br></br>
