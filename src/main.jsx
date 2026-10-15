@@ -113,13 +113,10 @@ function App() {
       </a>
       <header className="header">
         <a className="brand" href="#" aria-label="Hassan Irtaza home">
-
-
-            <span>
-              Syed Hassan Irtaza
-              <span className="brand-sub">AI & Automation Engineer</span>
-            </span>
-
+          <span>
+            Syed Hassan Irtaza
+            <span className="brand-sub">AI & Automation Engineer</span>
+          </span>
         </a>
         <nav
           className={menu ? "navigation open" : "navigation"}
@@ -339,9 +336,60 @@ function App() {
             </span>
           </div>
           <div className="about-grid">
-            <div className="about-title">
+            <div
+              className="about-title"
+              style={{ position: "relative", isolation: "isolate" }}
+            >
+              {/* Absolute positioning preserves the existing box dimensions.
+                  The photo is embedded so no separate asset path is needed. */}
+              <div
+                aria-hidden="true"
+                style={{
+                  position: "absolute",
+                  inset: 0,
+                  zIndex: -1,
+                  overflow: "hidden",
+                  borderRadius: "inherit",
+                  pointerEvents: "none",
+                  WebkitMaskImage:
+                    "linear-gradient(to bottom, #000 0%, #000 55%, transparent 100%)",
+                  maskImage:
+                    "linear-gradient(to bottom, #000 0%, #000 55%, transparent 100%)",
+                }}
+              >
+                <img
+                  src="/IMG.jpg"
+                  alt="Syed Hassan Irtaza portrait"
+                  loading="lazy"
+                  decoding="async"
+                  width={1206}
+                  height={1341}
+                  style={{
+                    position: "absolute",
+                    top: 0,
+                    right: 0,
+                    width: "72%",
+                    height: "100%",
+                    objectFit: "cover",
+                    objectPosition: "center 22%",
+                    opacity: 0.48,
+                    filter: "grayscale(1) sepia(0.18) contrast(1.05)",
+                    WebkitMaskImage:
+                      "linear-gradient(to right, transparent 0%, #000 42%, #000 100%)",
+                    maskImage:
+                      "linear-gradient(to right, transparent 0%, #000 42%, #000 100%)",
+                  }}
+                />
+              </div>
               <span className="about-star">✳</span>
               <h2>
+                <br></br>
+                <br></br>
+                <br></br>
+                <br></br>
+                <br></br>
+                <br></br>
+                <br></br>
                 Curious by nature.
                 <br />
                 <em>Engineer by choice.</em>
