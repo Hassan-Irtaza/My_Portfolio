@@ -20,6 +20,7 @@ import {
   ChevronDown,
 } from "lucide-react";
 import "./styles.css";
+import AnimatedName from "./components/AnimatedName.jsx";
 const Rays = lazy(() => import("./components/Rays.jsx"));
 const EMAIL = "hassanirtaza173@gmail.com";
 const projects = [
@@ -113,10 +114,12 @@ function App() {
       <header className="header">
         <a className="brand" href="#" aria-label="Hassan Irtaza home">
           <span className="monogram">H</span>
-          <span>
-            Syed Hassan Irtaza
-            <span className="brand-sub">AI & Automation Engineer</span>
-          </span>
+          <AnimatedName>
+            <span>
+              Syed Hassan Irtaza
+              <span className="brand-sub">AI & Automation Engineer</span>
+            </span>
+          </AnimatedName>
         </a>
         <nav
           className={menu ? "navigation open" : "navigation"}
